@@ -1,0 +1,14 @@
+Kali 2024.4 has just gone live!
+
+Kali Linux 2024.4 Release (Python 3.12, Goodbye i386, Raspberry Pi Imager & Kali NetHunter)Just before the year starts to wrap up, we are getting the final 2024 release out! This contains a wide range of updates and changes, which are in already in effect, ready for immediate download, or updating.
+
+The summary of the changelog since the 2024.3 release from September is:
+
+Python 3.12 - New default Python version (Au revoir pip, hello pipx)
+The end of the i386 kernel and images - Farewell x86 (images), but not goodbye (packages)
+Deprecations in the SSH client: DSA keys - Reminder about using ssh1 if required
+Raspberry Pi Imager Customizations Support - Able to alter settings at write time
+GNOME 47 - Now able to synchronize your favorite colors
+Kali Forums Refresh - New heart of the community home
+Kali NetHunter - Updates to the app, kernels, installer, store and website !
+New Tools - 14 new shiny toys added (and countless updated!)
