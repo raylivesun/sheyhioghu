@@ -1,0 +1,28 @@
+Okay, here's an example announcement suitable for a FreeBASIC community that aims to be welcoming and informative:
+
+**Subject: Welcome New FreeBASIC Enthusiasts! + Community Highlights**
+
+@everyone -- A warm welcome to all the newcomers joining our FreeBASIC community! We're thrilled to have you here. Whether you're a seasoned programmer or just starting your coding journey, you'll find a supportive and knowledgeable group ready to help.
+
+**What is FreeBASIC?**
+
+For those new to the language, FreeBASIC is a free, open-source, cross-platform BASIC compiler with syntax similar to Microsoft QuickBASIC. It's powerful, versatile, and a great choice for creating a wide range of applications, from games and graphical tools to console utilities.
+
+**Getting Started:**
+
+*   **Official Website:**  [https://www.freebasic.net/](https://www.freebasic.net/) - Download the compiler, browse the documentation, and find example code.
+*   **Wiki:** [https://www.freebasic.net/wiki/](https://www.freebasic.net/wiki/) - In-depth documentation and tutorials.
+*   **Forums:** [https://www.freebasic.net/forum/](https://www.freebasic.net/forum/) - Ask questions, share your projects, and connect with other FreeBASIC users.
+
+**Community Highlights & Tips:**
+
+*   **Don't be afraid to ask questions!**  There are no "stupid" questions, and we're all here to learn.
+*   **Share your code!**  Showing your projects is a great way to get feedback and inspire others.
+*   **Help others when you can!**  Contributing to the community is rewarding and helps everyone grow.
+*   **Use `#Option Explicit`!**  This forces you to declare all variables, preventing common errors. It's good practice!
+*   **Check the Wiki and search the forums before asking a question.** Someone may have already encountered and solved the problem!
+*   **When asking for help, provide a clear description of the problem and relevant code snippets.** This will make it easier for others to assist you.
+
+**Let's build awesome things with FreeBASIC!**
+
+We look forward to seeing your contributions and helping you succeed with FreeBASIC.  Happy coding!
