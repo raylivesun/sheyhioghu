@@ -1,0 +1,144 @@
+FreeBASIC has a comprehensive set of rules governing its syntax, data types, operators, program structure, and more. Here's a summary of the key rules and concepts you need to know:
+
+**1. Basic Syntax:**
+
+* **Case Insensitivity:** FreeBASIC is generally case-insensitive. `Print`, `PRINT`, and `print` are all treated the same. However, variable names declared with a type suffix (e.g., `myVar%`, `myVar$`) maintain case.
+* **Line Structure:**  Statements are typically written one per line.  A long statement can be continued on the next line using the line continuation character `_` (underscore) at the end of the line to be continued.
+* **Comments:**
+    * `'` (single quote):  Starts a single-line comment.  Anything after the `'` on that line is ignored.
+    * `Rem` (Remark):  Starts a single-line comment, similar to `'`.
+    * `/* ... */`:  Block comments (multi-line comments) are supported.  Anything between `/*` and `*/` is ignored.
+* **Keywords:** FreeBASIC has a set of reserved keywords (e.g., `Print`, `Sub`, `Function`, `If`, `Then`, `Else`, `For`, `Next`, `While`, `Wend`, `Do`, `Loop`, `Select`, `Case`, `Dim`, `As`) that cannot be used as variable names or other identifiers.
+* **Identifiers:**
+    * Identifiers are names you give to variables, constants, procedures (functions and subroutines), and other program elements.
+    * They must start with a letter (A-Z or a-z) or an underscore (`_`).
+    * They can contain letters, digits (0-9), and underscores.
+    * The maximum length of an identifier is typically 40 characters.
+
+**2. Data Types:**
+
+* **Integer Types:**
+    * `Byte`: 8-bit unsigned integer (0 to 255)
+    * `UByte`: Equivalent to `Byte` (unsigned byte). Introduced for clarity.
+    * `Short`: 16-bit signed integer (-32,768 to 32,767)
+    * `UShort`: 16-bit unsigned integer (0 to 65,535)
+    * `Integer`: 32-bit signed integer (-2,147,483,648 to 2,147,483,647)
+    * `UInteger`: 32-bit unsigned integer (0 to 4,294,967,295)
+    * `LongInt`: 64-bit signed integer (approximately -9.2e18 to 9.2e18)
+    * `ULongInt`: 64-bit unsigned integer (0 to approximately 1.8e19)
+* **Floating-Point Types:**
+    * `Single`: 32-bit single-precision floating-point number
+    * `Double`: 64-bit double-precision floating-point number
+* **String Type:**
+    * `String`: Variable-length string (can hold a string of any size, limited by available memory).
+    * Fixed-length strings can be declared as `String * n`, where `n` is the maximum length.
+    * `ZString`: Null-terminated string (C-style string).  Good for interoperability with C libraries. Can be fixed length `ZString * n` or variable-length `ZString`.
+* **Boolean Type:**
+    * `Boolean`: Represents a true/false value.  `True` is represented by -1, and `False` is represented by 0.
+* **Date Type:**
+    * `Date`: Stores date and time values. Internally, it's often represented as a `Double` (number of days since a base date).
+* **User-Defined Types (Structures):**
+    * `Type ... End Type`: Allows you to create custom data types by grouping together variables of different types.
+
+**3. Variables:**
+
+* **Declaration:** Variables must be declared before they are used (although implicit declaration is allowed if the `Explicit` option is not used; highly discouraged).
+    * `Dim`: Declares a local variable (within a procedure).
+    * `Static`: Declares a local variable whose value is preserved between calls to the procedure.
+    * `Shared`: Declares a variable that is shared between all instances of a class.
+    * `Global`: Declares a global variable (accessible from anywhere in the program).  Use sparingly.
+    * `Const`: Declares a constant (a value that cannot be changed after it's initialized).
+* **Type Suffixes (discouraged, but still available for compatibility):**
+    * `%`: Integer (equivalent to `As Integer`)
+    * `&`: LongInt (equivalent to `As LongInt`)
+    * `!`: Single (equivalent to `As Single`)
+    * `#`: Double (equivalent to `As Double`)
+    * `$`: String (equivalent to `As String`)
+* **Initialization:** Variables can be initialized at the time of declaration.
+    * `Dim myVar As Integer = 10`
+    * `Dim myString As String = "Hello"`
+
+**4. Operators:**
+
+* **Arithmetic Operators:** `+` (addition), `-` (subtraction), `*` (multiplication), `/` (floating-point division), `\` (integer division), `^` (exponentiation), `Mod` (modulo - remainder after division).
+* **Relational Operators:** `=` (equal to), `<>` (not equal to), `<` (less than), `>` (greater than), `<=` (less than or equal to), `>=` (greater than or equal to).
+* **Logical Operators:** `And`, `Or`, `Not`, `Xor`, `Eqv`, `Imp`.
+* **String Concatenation:** `&`
+* **Assignment Operator:** `=`
+* **Bitwise Operators:** `And`, `Or`, `Not`, `Xor`, `Eqv`, `Imp`, `Shl` (shift left), `Shr` (shift right).
+
+**5. Control Flow Statements:**
+
+* **`If...Then...Else...End If`:** Conditional execution.
+* **`Select Case...Case...Case Else...End Select`:** Multi-way branching.
+* **`For...Next`:** Looping with a counter.
+* **`While...Wend`:** Looping while a condition is true (older style, generally avoid).
+* **`Do...Loop`:** Looping with more flexible condition checking (e.g., `Do While...Loop`, `Do...Loop While`, `Do Until...Loop`, `Do...Loop Until`).
+* **`Exit For`, `Exit Do`, `Exit Sub`, `Exit Function`:**  Exits a loop or procedure prematurely.
+* **`Continue For`, `Continue Do`:**  Skips to the next iteration of a loop.
+* **`Goto`:**  Unconditional jump (generally discouraged, leads to spaghetti code).
+
+**6. Procedures (Subroutines and Functions):**
+
+* **`Sub...End Sub`:** Defines a subroutine (a procedure that doesn't return a value).
+* **`Function...End Function`:** Defines a function (a procedure that returns a value).
+* **`Declare Sub` and `Declare Function`:**  Used to declare external procedures (e.g., from DLLs) or to declare procedures before they are defined (forward declaration). While often optional for internal procedures, it's good practice.
+* **Parameters:** Procedures can accept parameters (arguments).
+    * `ByVal`: Passes a parameter by value (a copy of the value is passed).  Changes to the parameter within the procedure do not affect the original variable.
+    * `ByRef`: Passes a parameter by reference (a pointer to the original variable is passed).  Changes to the parameter within the procedure *do* affect the original variable.  This is the default if `ByVal` or `ByRef` is not specified.  Use `ByVal` when possible to avoid unintended side effects.
+* **Return Values:** Functions return a value of a specific data type. The return value is assigned to the function name within the function body.
+
+**7. Arrays:**
+
+* **Declaration:**
+    * `Dim myArray(10) As Integer`: Declares a fixed-size array of 11 integers (indexes 0 to 10).
+    * `Dim myArray(1 To 10) As Integer`: Declares a fixed-size array of 10 integers (indexes 1 to 10).
+    * `Dim myArray() As Integer`: Declares a dynamic array (size not fixed at compile time).
+* **Resizing Dynamic Arrays:**
+    * `Redim myArray(20)`: Resizes a dynamic array.  The contents of the array are lost unless you use `Redim Preserve`.
+    * `Redim Preserve myArray(20)`: Resizes a dynamic array while preserving the existing contents.  Use this carefully, as it can be slow if the array is large.
+* **Multidimensional Arrays:**
+    * `Dim myArray(5, 10) As Double`: Declares a 2D array.
+
+**8. Pointers:**
+
+* **Declaration:** `Dim myPtr As Integer Ptr`
+* **Address Operator:** `@` (returns the address of a variable).
+* **Dereference Operator:** `*` (accesses the value at the address pointed to by a pointer).
+* **Memory Allocation:** `New`, `Delete`. Use carefully to avoid memory leaks.  FreeBASIC's automatic memory management (garbage collection) handles most cases, but you'll need to use `New` and `Delete` when dealing with pointers to dynamically allocated memory.
+
+**9. Object-Oriented Programming (OOP):**
+
+* **Classes:**
+    * `Type ... End Type` can be used to define classes.
+    * `Declare Constructor`, `Declare Destructor`: Special procedures for creating and destroying objects.
+    * `Private`, `Protected`, `Public`: Access modifiers for class members (fields and methods).
+* **Inheritance:** Supported using the `Extends` keyword.
+* **Polymorphism:** Supported through virtual methods (declared with the `Virtual` keyword).
+
+**10. Modules:**
+
+* FreeBASIC supports modular programming. You can split your code into separate files (modules) for better organization.
+* `#Include "my_module.bi"`: Includes the contents of a file (typically a header file containing declarations).
+* `#Include Once "my_module.bi"`: Includes the file only once, even if it's included multiple times.
+
+**11.  Compiler Directives:**
+
+* Compiler directives start with a `#` symbol.  Examples:
+    * `#Include`:  Includes a file.
+    * `#Define`: Defines a preprocessor macro.
+    * `#If`, `#Else`, `#EndIf`: Conditional compilation.
+    * `#Lang`: Specifies the language dialect (e.g., `#Lang QB`, `#Lang FBDialect`). `#Lang FB` (or no `#Lang` directive) is the default and recommended dialect.
+    * `#Option Explicit`: Forces explicit variable declaration. Highly recommended.
+
+**12. Important Considerations:**
+
+* **Error Handling:** Use `On Error Goto` to handle runtime errors.
+* **String Handling:** FreeBASIC provides a rich set of string functions (e.g., `Len`, `Left`, `Right`, `Mid`, `InStr`, `UCase`, `LCase`, `Trim`).
+* **File I/O:** Use `Open`, `Close`, `Input`, `Line Input`, `Print #`, `Get`, `Put` for file operations.
+* **Graphics:** FreeBASIC has a graphics library for creating graphical applications.
+* **Sound:** FreeBASIC can play sounds using libraries like FMOD or by directly accessing sound hardware (which is platform-dependent).
+* **Libraries:**  FreeBASIC can interface with C libraries (DLLs) and other libraries.  Use `Declare` to define the functions you want to use from the library.
+* **Explicit Declaration:**  Always use `#Option Explicit` at the beginning of your code. This forces you to declare all variables before using them, which helps prevent errors.
+
+This comprehensive overview should give you a solid foundation for understanding FreeBASIC's rules.  Refer to the official FreeBASIC documentation for the most detailed and up-to-date information:  [https://www.freebasic.net/wiki/](https://www.freebasic.net/wiki/)
