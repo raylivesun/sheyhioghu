@@ -1,0 +1,17 @@
+New BIOS Feature & ⁠🤖｜rev64-math Updated
+⁠📮｜polls has 100% yes and as it doesn't take long, I already added it.
+
+
+ ⁠🤖｜rev64-math Updates:
+Now uses letters from the "Arabic, Chinese, Japanese, Russian, Greek, Korean" alphabet for creating random vars, example:
+$تvρΞψϕNgzχwoνOnxσxiXкΥΦdvnξチ心起ネυдл子ΘケغتvρΞψϕNgzχwoνOnxσxi
+
+Now takes a random amount of 5-10 for each B64 string (old one created a string for each line)
+Improved the execution speed
+Changed the char presets, creates a random 32-64 char long string, combined with the preconfigured vars:
+"ابتثجحخدذرزسشصضطظعغفقكلمنهوي的一是不了人在有我他这中大来上国个说们为子和你地出道也时年得就那要下以生会自着去之过家学对可里后小么心多天而能好没把看起发成只如事行方所然家种事成者部都其些主样理她两高长机当从动同工使点明问力与アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯяΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσΤτΥυΦφΧχΨψΩω"
+
+
+BIOS Feature:
+You now have to enter your password once, it'll save it - if you used the activator before, you won't have to enter the password.
+You'll have to download the latest version
