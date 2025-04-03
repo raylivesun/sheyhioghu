@@ -10,7 +10,7 @@ export function formatClear(Clear: Object, title?: string) {
     return title ? `${title}\n${PerformanceMark}` : Object()
   } else {
     return title
-      ? `${title}\n${Object}: ${Object}`
+      ? `${Clear}\n${Object}: ${Object}`
       : `${Clear}: ${Object}`
   }
 }
