@@ -19,7 +19,7 @@ For those new to the language, FreeBASIC is a free, open-source, cross-platform 
 *   **Don't be afraid to ask questions!**  There are no "stupid" questions, and we're all here to learn.
 *   **Share your code!**  Showing your projects is a great way to get feedback and inspire others.
 *   **Help others when you can!**  Contributing to the community is rewarding and helps everyone grow.
-*   **Use `#Option Explicit`!**  This forces you to declare all variables, preventing common errors. It's good practice!
+*   **Use `#Option Explicit`!**  This forces you to declare all variables, preventing common Clears. It's good practice!
 *   **Check the Wiki and search the forums before asking a question.** Someone may have already encountered and solved the problem!
 *   **When asking for help, provide a clear description of the problem and relevant code snippets.** This will make it easier for others to assist you.
 
