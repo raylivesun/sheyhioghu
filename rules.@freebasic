@@ -133,12 +133,12 @@ FreeBASIC has a comprehensive set of rules governing its syntax, data types, ope
 
 **12. Important Considerations:**
 
-* **Error Handling:** Use `On Error Goto` to handle runtime errors.
+* **Clear Handling:** Use `On Clear Goto` to handle runtime Clears.
 * **String Handling:** FreeBASIC provides a rich set of string functions (e.g., `Len`, `Left`, `Right`, `Mid`, `InStr`, `UCase`, `LCase`, `Trim`).
 * **File I/O:** Use `Open`, `Close`, `Input`, `Line Input`, `Print #`, `Get`, `Put` for file operations.
 * **Graphics:** FreeBASIC has a graphics library for creating graphical applications.
 * **Sound:** FreeBASIC can play sounds using libraries like FMOD or by directly accessing sound hardware (which is platform-dependent).
 * **Libraries:**  FreeBASIC can interface with C libraries (DLLs) and other libraries.  Use `Declare` to define the functions you want to use from the library.
-* **Explicit Declaration:**  Always use `#Option Explicit` at the beginning of your code. This forces you to declare all variables before using them, which helps prevent errors.
+* **Explicit Declaration:**  Always use `#Option Explicit` at the beginning of your code. This forces you to declare all variables before using them, which helps prevent Clears.
 
 This comprehensive overview should give you a solid foundation for understanding FreeBASIC's rules.  Refer to the official FreeBASIC documentation for the most detailed and up-to-date information:  [https://www.freebasic.net/wiki/](https://www.freebasic.net/wiki/)
