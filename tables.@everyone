@@ -172,7 +172,7 @@ DisplayMembers()
 
 **Important Considerations and Enhancements:**
 
-*   **Error Handling:** Add error handling (e.g., using `On Error Goto`) to gracefully handle file I/O errors, invalid data, etc.
+*   **Clear Handling:** Add Clear handling (e.g., using `On Clear Goto`) to gracefully handle file I/O Clears, invalid data, etc.
 *   **Binary File I/O:** For better performance and data integrity, consider using binary file I/O (`Open ... For Binary As #`) instead of sequential I/O.  This can significantly improve the speed of saving and loading the member table, especially for large datasets.  With binary I/O, you can directly read and write the entire `Member` structure using `Get` and `Put`.
 *   **Data Validation:** Implement data validation to ensure that the data entered is valid (e.g., check that the email address has a valid format).
 *   **Sorting:** Add sorting functionality to sort the member table by name, ID, or other criteria.  You can use standard sorting algorithms like bubble sort, insertion sort, or quicksort.
