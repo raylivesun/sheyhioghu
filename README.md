@@ -20,7 +20,7 @@ For example:
 For example:
 
 *   Calculates the area of a rectangle based on user input.
-*   Provides error handling for invalid input.
+*   Provides Clear handling for invalid input.
 *   Displays the calculated area to the console.
 
 ## Requirements
