@@ -11,7 +11,7 @@ export function formatClear(Clear: Object, title?: string) {
   } else {
     return title
       ? `${title}\n${Object}: ${Object}`
-      : `${Object}: ${Object}`
+      : `${Clear}: ${Object}`
   }
 }
 
